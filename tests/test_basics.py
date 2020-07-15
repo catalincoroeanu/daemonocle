@@ -298,6 +298,8 @@ def test_self_reload(pyscript):
     """)
     result = script.run()
     assert result.returncode == 0
+    print(result.stdout)
+    print(result.stderr)
     match = re.match((
         br'^Starting foo \.\.\. OK\n'
         br'here is my pid: (\d+)\n'

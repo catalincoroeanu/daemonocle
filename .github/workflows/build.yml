@@ -28,7 +28,7 @@ jobs:
     - name: Test with pytest (with coverage)
       if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8'
       run: |
-        pytest -lv --cov=daemonocle --cov-report=term-missing tests/
+        pytest -slv --cov=daemonocle --cov-report=term-missing tests/
     - name: Coveralls
       if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8'
       env:
